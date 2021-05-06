@@ -1,0 +1,94 @@
+@import url('nullstyle.css');
+@import 'mixin.scss';
+//========================Global=============================
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+//=========================First-screen======================
+.first-screen {
+    background-image: url(../images/main-bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    min-height: 100vh;
+    &_dark {
+        background-color: rgba(#000, .6);
+        min-height: 100vh;
+    }
+}
+.header {
+    background: linear-gradient(
+        90deg,
+        rgba(255,255,255, .0) 10%,
+        rgba(0,0,0, .8) 100%);
+
+    display: flex;
+    justify-content: space-between;;
+    align-items: center;
+
+    padding: 20px 0;
+
+    color: #fff;
+    .logo {
+        font-size: 42px;
+        text-transform: uppercase;
+        font-family: 'Righteous', cursive;
+        span {
+            color: $main-color;
+        }
+    }
+    .nav {
+        &__link {
+            font-size: 18px;
+            margin-right: 20px;
+            position: relative;
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                margin-bottom: -10px;
+
+                height: 2px;
+                width: 100%;
+
+                background-color: $main-color;
+            }
+        }
+    }
+}
+// Offer
+.offer {
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-around;
+    // height: 80vh;
+    &__title {
+        font-size: 50px;
+
+        max-width: 1300px;
+        margin: 0 auto;
+        padding-top: 80px;
+    }
+    &__subtitle {
+        font-size: 24px;
+
+        max-width: 1000px;
+        margin: 0 auto;
+        padding-top: 250px;
+    }
+    img {
+        padding-top: 40px;
+        animation: up-down infinity fill-mode;
+    }
+}
