@@ -8,10 +8,16 @@
 .title {
     font-size: 34px;
     font-weight: 500;
+    &_white {
+        color:#fff;
+    }
 }
 .subtitle {
     font-size: 20px;
     line-height: 1.5em;
+    &_white {
+        color: #fff;
+    }
 }
 .tac {
     text-align: center;
@@ -260,4 +266,46 @@
               }
           }
       }
+      &_about {
+          position: absolute;
+          width: 100%;
+          bottom: 0;
+      }
   }
+//==========================//end//=============================
+
+
+//=============================About2=============================
+.about2 {
+    &-screen {
+    position: relative;
+    background-image: url(../images/about-bg.webp);
+    background-size: cover;
+    min-height: 100vh;
+    max-height: 100vh;
+    &_dark {
+        background-color: rgba(#000, .6);
+        max-height: 100vh;
+        min-height: 100vh;
+        }
+    }
+    &__content {
+        display: flex;
+    }
+    &__text {
+        max-width: 60%;
+        p {
+            padding-top: 40px;
+            line-height: 1.8em;
+            span {
+                color: $main-color;
+            }
+        }
+    }
+    &__img {
+        img {
+            width: 300px;
+            margin-left: 50%;
+        }
+    }
+}
